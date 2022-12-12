@@ -1,0 +1,57 @@
+*{
+    font-family: 'Basic', sans-serif;
+    font-size: 1.5rem;
+}
+.bg-custom{
+    background: #1D1B1B;
+    color: #fff;
+}
+.btn-outline-white{
+    border-bottom: solid 1px white;
+    color: white;
+}
+.brand-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 250px;
+}
+.navbar{
+    text-align: center;
+}
+.nav-item{
+    margin-top: 20px;
+}
+.nav-item:hover{
+    background-color: #FD8211;
+    border-radius: 8px;
+    color: white;
+}
+
+.cart-container{
+    margin-right: 25px;
+    display: inline-block;
+    
+}
+.badge{
+    position: relative;
+    top: -15px;
+    font-size: 1rem;
+}
+.navbar-notifications{
+    margin: 20px 0;
+}
+@media screen and (min-width: 1000px) {
+    .brand-container{
+        margin-right: 250px;
+    }
+    .navbar{
+        padding: 20px 0;
+    }
+    .nav-item{
+        margin-top: 0;
+        padding: 0 30px;
+    }
+  }
+
+

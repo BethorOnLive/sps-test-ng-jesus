@@ -1,0 +1,86 @@
+@import "~@ng-select/ng-select/themes/default.theme.css";
+
+*{
+    font-family: 'Inter', sans-serif;
+}
+/*Estilos para el botón registrar*/
+.btn-close{
+    background-color: #F5F5F5;
+}
+
+.btn-outline-signin:hover{
+    border-color: #FD8211;
+    border-radius: 8px;
+    color: #FD8211;
+}
+.btn-outline-signin{
+    border: solid 1px white;
+    color: white;
+    margin-right: 25px;
+}
+/*Estilos para header del modal*/
+.modal-header{
+    margin-bottom: 50px;
+    background-color: #FD8211;
+}
+.brand-container{
+    font-size: 1.5rem;
+    width: 200px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-weight: bold;
+    font-family: 'Basic', sans-serif;
+    color: white;
+}
+.navbar-brand{
+    margin-top: 5px;
+}
+/*Estilos para el modal*/
+.btn-success{
+    background-color: white;
+    color: #28C76F;
+    border-color: #28C76F;
+    margin-left: 10px;
+}
+.btn-success:hover{
+    background-color: #28C76F;
+    color: white;
+}
+
+.btn-danger{
+    background-color: #F5F5F5;
+    color: #EA5455;
+    border-color: #EA5455;
+    margin-right: 10px;
+}
+.btn-danger:hover{
+    background-color: #EA5455;
+    color: #F5F5F5;
+}
+
+.title-header-modal{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 30px;
+    color: #4B4B4B;
+}
+/*Validaciones de formulario*/
+.form-group{
+    margin-bottom: 10px;
+}
+.messages{
+    opacity: 0;
+    transition: all .5s ease-in;
+    color: #EA5455;
+}
+.active{
+    opacity: 1;
+}
+ 
+.is-invalid{
+    border-radius: 0.357rem;
+    border: solid .5px #ea5455;
+}

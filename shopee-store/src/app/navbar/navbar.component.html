@@ -1,0 +1,40 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-custom">
+    <div class="container-fluid text-white">
+      <div class="brand-container">
+        <i class="fa-brands fa-shopify"></i>
+        <a class="navbar-brand text-white" href="#">Shopee Store</a>
+      </div>  
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active text-white" aria-current="page" href="#" >
+                Shop
+            </a>
+          </li>
+          <li ngbDropdown class="nav-item d-inline-block">
+			<button type="button" class="btn btn-outline-white" id="dropdownBasic1" ngbDropdownToggle>
+				Lorem ipsum
+			</button>
+			<div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+				<button ngbDropdownItem>Action - 1</button>
+				<button ngbDropdownItem>Another action</button>
+				<button ngbDropdownItem>Another action</button>
+			</div>
+		  </li>
+          <li class="nav-item">
+            <a class="nav-link disabled text-white">Disabled</a>
+          </li>
+        </ul>
+        <div class="navbar-notifications">
+            <div class="cart-container">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="badge rounded-pill badge-notification bg-danger">1</span>
+            </div>
+        </div>
+        <app-register></app-register>
+      </div>
+    </div>
+  </nav>

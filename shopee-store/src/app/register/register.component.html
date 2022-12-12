@@ -1,0 +1,164 @@
+<button 
+    type="button" 
+    class="btn btn-outline-signin" 
+    rippleEffect
+    (click)="openLg(content)"
+    >
+    Registrarse
+</button>
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <div class="title-header-modal">
+        <div class="brand-container">  
+            <i class="fa-brands fa-shopify"></i>
+            <h3 class="navbar-brand">Shopee Store</h3>
+        </div> 
+        <h4 class="modal-title text-white" id="modal-basic-title">Nuevo usuario</h4>
+    </div>
+    <button
+      type="button"
+      class="btn-close"
+      aria-label="Close"
+      (click)="modal.dismiss('Cross click')"
+    ></button>
+  </div>
+  <div class="modal-body">
+    <form [formGroup]="form" (ngSubmit)="saveForm()">
+      <div class="row">
+        <div class="col-md-6 col-12 mb-4">
+          <div class="form-group">
+            <input
+              [ngClass]="{
+                'is-invalid': emailField?.touched && emailField?.invalid
+              }"
+              type="text"
+              class="form-control"
+              placeholder="Nombre"
+              formControlName="name"
+            />
+            <div
+              class="messages"
+              [class.active]="nameField?.touched && nameField?.invalid"
+            >
+              <div>
+                <small *ngIf="nameField?.hasError('required')"
+                  >Escribe tu nombre</small
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-12 mb-4">
+          <div class="form-group">
+            <input
+              [ngClass]="{
+                'is-invalid': lastNameField?.touched && lastNameField?.invalid
+              }"
+              type="text"
+              class="form-control"
+              placeholder="Apellido"
+              formControlName="lastName"
+            />
+            <div
+              class="messages"
+              [class.active]="lastNameField?.touched && lastNameField?.invalid"
+            >
+              <div>
+                <small *ngIf="lastNameField?.hasError('required')"
+                  >Escribe tu apellido</small
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12 col-12 mb-4">
+          <div class="form-group">
+            <input
+              [ngClass]="{
+                'is-invalid': emailField?.touched && emailField?.invalid
+              }"
+              type="text"
+              class="form-control"
+              placeholder="Correo electronico"
+              formControlName="email"
+            />
+            <div
+              class="messages"
+              [class.active]="emailField?.touched && emailField?.invalid"
+            >
+              <div>
+                <small *ngIf="emailField?.hasError('required')"
+                  >Ingresa tu email</small
+                >
+                <small *ngIf="emailField?.hasError('email')"
+                  >Ingresa un email valido</small
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-12 mb-4">
+          <div class="form-group">
+            <ng-select
+                [items]="dataCountries"
+                bindLabel="country"
+                binValue="id"
+                placeholder="País"
+                formControlName="country"
+              >
+            </ng-select>
+          </div>
+        </div>
+        <div class="col-md-6 col-12 mb-4">
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Ciudad"
+              formControlName="city"
+            />
+          </div>
+        </div>
+        <div class="col-md-12 col-12 mb-4">
+          <div class="input-group">
+            <input
+                class="form-control"
+                [ngClass]="{
+                  'is-invalid': emailField?.touched && emailField?.invalid
+                }"
+                placeholder="yyyy-mm-dd"
+                name="dp"
+                formControlName="dateOfBirth"
+                ngbDatepicker
+                #basicDP="ngbDatepicker"
+			      />
+			    <button class="btn btn-outline-secondary bi bi-calendar3" (click)="basicDP.toggle()" type="button"><i class="fa-solid fa-calendar"></i></button>
+          
+          </div>
+        </div>
+        <div
+          class="messages"
+          [class.active]="emailField?.touched && emailField?.invalid"
+        >
+          <div>
+             <small *ngIf="emailField?.hasError('required')"
+              >Selecciona tu fecha de nacimiento</small
+            >
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer justify-content-center">
+    <button
+      type="button"
+      class="btn btn-danger btn-lg"
+      (click)="modal.close('Save click')"
+    >
+      Cancelar
+    </button>
+    <button type="submit" class="btn btn-success btn-lg" (click)="saveForm()">
+      Registrarse
+    </button>
+  </div>
+</ng-template>
