@@ -9,12 +9,14 @@ import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 
 import { NavbarComponent } from './navbar/navbar.component';
 import { RegisterComponent } from './register/register.component';
+import { SearchHeaderNavComponent } from './search-header-nav/search-header-nav.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    RegisterComponent
+    RegisterComponent,
+    SearchHeaderNavComponent
   ],
   imports: [
     BrowserModule,

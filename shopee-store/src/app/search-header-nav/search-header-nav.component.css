@@ -1,0 +1,19 @@
+@import "~@ng-select/ng-select/themes/default.theme.css";
+
+.profile-header{
+    border-radius: 0;
+    padding: 0;
+}
+.img-background{
+    margin: -0.85px -0.7px 0 -0.7px;
+}
+.filter-content{
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form-control, ng-select{
+    border: #FD8211 solid 2px;
+    border-radius: 8px;
+}

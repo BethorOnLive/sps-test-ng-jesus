@@ -79,7 +79,6 @@
 .active{
     opacity: 1;
 }
- 
 .is-invalid{
     border-radius: 0.357rem;
     border: solid .5px #ea5455;

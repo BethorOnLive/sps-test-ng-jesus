@@ -137,15 +137,15 @@
           </div>
         </div>
         <div
-          class="messages"
-          [class.active]="emailField?.touched && emailField?.invalid"
-        >
-          <div>
-             <small *ngIf="emailField?.hasError('required')"
-              >Selecciona tu fecha de nacimiento</small
-            >
+            class="messages"
+            [class.active]="emailField?.touched && emailField?.invalid"
+          >
+            <div>
+              <small *ngIf="emailField?.hasError('required')"
+                >Selecciona tu fecha de nacimiento</small
+              >
+            </div>
           </div>
-        </div>
       </div>
     </form>
   </div>
