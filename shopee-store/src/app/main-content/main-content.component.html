@@ -1,0 +1,20 @@
+<div class="content-wrapper container-xxl p-0">
+    <div class="content-body">
+        <div class="row match-height">
+            <div class="col-md-6 col-lg-4" *ngFor="let product of products">
+              <div class="card text-center ecommerce-card">
+                <div class="card-body">
+                  <h4 class="card-title">{{ product.title }}</h4>
+                  <h6 class="card-subtitle text-muted">Support card subtitle</h6>
+                </div>
+                <img class="img-fluid" src={{product.image}} alt="Card image cap" width="200px"/>
+                <div class="card-body">
+                  <p class="card-text">{{ product.description }}</p>
+                  <a href="javascript:void(0)" class="card-link pink">{{ product.price }}k</a>
+                  <a href="javascript:void(0)" class="card-link pink">{{ product.category }}k</a>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+  </div>

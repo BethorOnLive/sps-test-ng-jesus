@@ -6,17 +6,21 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { FormsModule } from '@angular/forms';
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
+import { HttpClientModule } from '@angular/common/http';
 
 import { NavbarComponent } from './navbar/navbar.component';
 import { RegisterComponent } from './register/register.component';
 import { SearchHeaderNavComponent } from './search-header-nav/search-header-nav.component';
+import { MainContentComponent } from './main-content/main-content.component';
+import { StoreServiceService } from './main-content/store-service.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     RegisterComponent,
-    SearchHeaderNavComponent
+    SearchHeaderNavComponent,
+    MainContentComponent
   ],
   imports: [
     BrowserModule,
@@ -26,8 +30,9 @@ import { SearchHeaderNavComponent } from './search-header-nav/search-header-nav.
     NgSelectModule,
     FormsModule,
     SweetAlert2Module.forRoot(),
+    HttpClientModule
   ],
-  providers: [],
+  providers: [HttpClientModule, StoreServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,5 +1,8 @@
 @import "~@ng-select/ng-select/themes/default.theme.css";
 
+.content-body{
+    background-color: white;
+}
 .profile-header{
     border-radius: 0;
     padding: 0;

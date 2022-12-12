@@ -1,0 +1,21 @@
+.content-wrapper{
+    margin-top: 50px;
+}
+
+.content-body{
+    background-color: #EEE6E6;
+}
+
+.card{
+    margin: 25px 25px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.card:hover{
+    transform: translateY(-15px);
+    box-shadow: 0 4px 25px 0 rgba(0,0,0, 0.25);
+}
+.img-fluid{
+    margin: 0 auto;
+}
