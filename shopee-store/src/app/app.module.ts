@@ -13,6 +13,7 @@ import { RegisterComponent } from './register/register.component';
 import { SearchHeaderNavComponent } from './search-header-nav/search-header-nav.component';
 import { MainContentComponent } from './main-content/main-content.component';
 import { StoreServiceService } from './main-content/store-service.service';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { StoreServiceService } from './main-content/store-service.service';
     NavbarComponent,
     RegisterComponent,
     SearchHeaderNavComponent,
-    MainContentComponent
+    MainContentComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

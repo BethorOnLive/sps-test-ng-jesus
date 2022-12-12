@@ -12,7 +12,6 @@ import { StoreServiceService } from '../main-content/store-service.service'
 export class SearchHeaderNavComponent implements OnInit {
 
   public dataProducts = [];
-
   searchProduct = new FormControl();
   searchCategory = new FormControl();
 
@@ -42,6 +41,11 @@ export class SearchHeaderNavComponent implements OnInit {
     .pipe(debounceTime(500))
     .subscribe(value => {
       console.log('searchCategory has changed:', value)
+     
+    //const temporal = this.dataProducts.filter(item => item.title.includes(value));
+
+    //this.dataProducts = temporal;
+
     });
   }
 
