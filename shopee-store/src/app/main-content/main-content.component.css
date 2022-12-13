@@ -13,9 +13,27 @@
 }
 
 .card:hover{
-    transform: translateY(-15px);
+    transform: translateY(-5px);
     box-shadow: 0 4px 25px 0 rgba(0,0,0, 0.25);
 }
 .img-fluid{
     margin: 0 auto;
+}
+
+.text-price{
+    color: #1D1B1B;
+}
+
+.btn{
+    margin: 0 5px;
+}
+
+.btn-outline-secondary{
+    border: #FD8211 solid 1px;
+    color: #FD8211;
+}
+
+.btn-outline-secondary:hover{
+    background-color: #FD8211;
+    color: white;
 }

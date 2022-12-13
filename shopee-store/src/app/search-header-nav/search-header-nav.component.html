@@ -26,10 +26,10 @@
         </div>
         <div class="col-xl-3 col-md-6 col-sm-12 col-12 mb-1">
           <ng-select
-              [items]="dataProducts"
+              [items]="dataProductsTemp"
               bindLabel="category"
-              binValue="id"
-              placeholder="País"
+              binValue="category"
+              placeholder="Categoria de productos"
               [formControl]="searchCategory"
             >
           </ng-select>

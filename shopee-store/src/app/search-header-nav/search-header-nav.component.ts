@@ -1,7 +1,8 @@
 import { Component, OnInit, ViewEncapsulation} from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { debounceTime } from 'rxjs/operators';
-import { StoreServiceService } from '../main-content/store-service.service'
+import { StoreServiceService } from '../main-content/store-service.service';
+import { SharedServiceService } from '../shared-service.service';
 
 @Component({
   selector: 'app-search-header-nav',
@@ -11,19 +12,23 @@ import { StoreServiceService } from '../main-content/store-service.service'
 })
 export class SearchHeaderNavComponent implements OnInit {
 
-  public dataProducts = [];
+  private _dataProducts:Array<any> = [];
+  public dataProductsTemp:Array<any> = [];
+
   searchProduct = new FormControl();
   searchCategory = new FormControl();
 
   constructor(
-    private _api: StoreServiceService
+    private _api: StoreServiceService,
+    private sharedService: SharedServiceService
   ) { }
 
   getProducts(){
     this._api.getProducts()
     .subscribe((response) => {
-      this.dataProducts = response;
-      console.log("dataProducts: ", this.dataProducts);
+      this._dataProducts = response;
+      this.dataProductsTemp = response;
+      console.log("dataProducts: ", this._dataProducts);
     })
   }
 
@@ -34,19 +39,20 @@ export class SearchHeaderNavComponent implements OnInit {
     this.searchProduct.valueChanges
     .pipe(debounceTime(500))
     .subscribe(value => {
-      console.log('searchProduct has changed:', value)
+      //Con esta función enviamos el valor que recupera el input hacia el componente donde se renderizan las cards
+      this.sharedService.setData(value);
     });
 
     this.searchCategory.valueChanges
     .pipe(debounceTime(500))
     .subscribe(value => {
-      console.log('searchCategory has changed:', value)
      
-    //const temporal = this.dataProducts.filter(item => item.title.includes(value));
-
-    //this.dataProducts = temporal;
+    console.log("Value category:", value.category);
+    
+    //Aquí tuve dificultad para hacer el filtro por categoria :(
 
     });
+
   }
 
 }

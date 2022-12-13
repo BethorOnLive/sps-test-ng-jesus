@@ -1,17 +1,20 @@
 <div class="content-wrapper container-xxl p-0">
     <div class="content-body">
         <div class="row match-height">
-            <div class="col-md-6 col-lg-4" *ngFor="let product of products">
+            <div class="col-md-6 col-lg-4" *ngFor="let product of dataProductsTemp">
               <div class="card text-center ecommerce-card">
                 <div class="card-body">
                   <h4 class="card-title">{{ product.title }}</h4>
-                  <h6 class="card-subtitle text-muted">Support card subtitle</h6>
+                  <h6 class="card-subtitle text-muted">{{ product.category }}</h6>
+                  <hr>
+                  <h5 class="card-subtitle text-price">${{ product.price }}</h5>
                 </div>
                 <img class="img-fluid" src={{product.image}} alt="Card image cap" width="200px"/>
                 <div class="card-body">
-                  <p class="card-text">{{ product.description }}</p>
-                  <a href="javascript:void(0)" class="card-link pink">{{ product.price }}k</a>
-                  <a href="javascript:void(0)" class="card-link pink">{{ product.category }}k</a>
+                  <!--con slice recortamos la descripción a 100 caracteres por producto-->
+                  <p class="card-text">{{ product.description.slice(0,100) }}</p>
+                  <button type="button" class="btn btn-outline-secondary"><i class="fa-solid fa-cart-shopping"></i> Agregar</button>
+                  <button type="button" rippleEffect class="btn btn-outline-primary">Ver descripción</button>
                 </div>
               </div>
             </div>

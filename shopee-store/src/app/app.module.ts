@@ -13,6 +13,7 @@ import { RegisterComponent } from './register/register.component';
 import { SearchHeaderNavComponent } from './search-header-nav/search-header-nav.component';
 import { MainContentComponent } from './main-content/main-content.component';
 import { StoreServiceService } from './main-content/store-service.service';
+import { SharedServiceService } from './shared-service.service'
 import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
@@ -34,7 +35,7 @@ import { FooterComponent } from './footer/footer.component';
     SweetAlert2Module.forRoot(),
     HttpClientModule
   ],
-  providers: [HttpClientModule, StoreServiceService],
+  providers: [StoreServiceService, SharedServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
